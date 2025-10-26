@@ -58,13 +58,13 @@
             justify-content: center;
             transition: all 0.3s ease;
             animation: pulse 2s infinite;
-            margin-bottom: 2rem;
+            transform: rotate(90deg);
         }
 
         .enter-button:hover {
             background: #ffffff;
             color: #000000;
-            transform: scale(1.1);
+            transform: rotate(90deg) scale(1.1);
         }
 
         @keyframes pulse {
@@ -74,13 +74,6 @@
             70% {
                 box-shadow: 0 0 0 20px rgba(255, 255, 255, 0);
             }
-        }
-
-        .enter-text {
-            font-size: 1rem;
-            color: #ccc;
-            text-align: center;
-            margin-top: 1rem;
         }
 
         /* Основной контент */
@@ -306,14 +299,13 @@
 <body>
     <!-- Прелоадер -->
     <div class="preloader" id="preloader">
-        <button class="enter-button" onclick="enterSite()">↓</button>
-        <div class="enter-text">нажми чтобы войти</div>
+        <button class="enter-button" onclick="enterSite()">→</button>
     </div>
 
     <!-- Основной контент -->
     <div class="main-content" id="mainContent">
         <div class="background-gif">
-            <img src="https://media1.tenor.com/m/zFTUi43HePQAAAAC/flowers-beautiful-flowers.gif" alt="Background">
+            <img src="https://i.pinimg.com/originals/70/6e/a8/706ea81cd3e0a418ffc2e7c3c17f28c1.gif" alt="Background">
         </div>
 
         <div class="container">
