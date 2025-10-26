@@ -15,12 +15,27 @@
             box-sizing: border-box;
         }
 
+        /* Запрет выделения текста */
         body {
+            -webkit-user-select: none;
+            -moz-user-select: none;
+            -ms-user-select: none;
+            user-select: none;
             font-family: 'Courier New', monospace;
             background: #000000;
             color: #ffffff;
             min-height: 100vh;
             overflow: hidden;
+        }
+
+        /* Разрешаем выделение в интерактивных элементах */
+        .music-widget,
+        .terminal,
+        .control-btn {
+            -webkit-user-select: auto;
+            -moz-user-select: auto;
+            -ms-user-select: auto;
+            user-select: auto;
         }
 
         /* Прелоадер */
@@ -475,6 +490,11 @@
             if (e.code === 'Space' || e.code === 'Enter') {
                 enterSite();
             }
+        });
+
+        // Дополнительная защита от выделения текста
+        document.addEventListener('selectstart', function(e) {
+            e.preventDefault();
         });
     </script>
 </body>
